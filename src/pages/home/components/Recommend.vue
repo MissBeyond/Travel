@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">热销推荐</div>
         <ul>
-            <li class="item" v-for="item of recommendList" :key="item.id">
+            <li class="item" v-for="item of list" :key="item.id">
                 <img  class="item-img" :src="item.imgUrl" />
                 <div class="item-info"> 
                 <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data () {
-        return {
-            recommendList: [{
-            id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-            title: '深圳野生动物园',
-            desc: '放养式动物园让你和动物们“零距离',
-        },{
-            id: '0002',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/17/176c2114bb8ae255a3.water.png_200x200_a1b6cfdf.png',
-            title: '欢乐海岸',
-            desc: '一起享受夏天的清爽',
-
-        },{
-            id: '0003',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/6f/6f885ea8b30c67bca3.water.jpg_200x200_21b03a9c.jpg',
-            title: '世界之窗',
-            desc: '全球微缩景点，精彩演绎、娱乐项目应有尽有',
-
-        }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>

@@ -10,6 +10,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ajv": "^6.5.0",
+    "axios": "^0.18.0",
     "fastclick": "^1.0.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
