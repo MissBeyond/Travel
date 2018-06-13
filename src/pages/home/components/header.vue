@@ -7,26 +7,25 @@
           <i class="icon iconfont icon-sousuo"></i>
           输入城市/景点/美食
     </div>
-      <div class="header-right">
-         {{this.city}}
+    <router-link to="/city">
+        <div class="header-right">
+         {{this.$store.state.city}}
           <i class="icon iconfont icon-jiantou"></i> 
-    </div>
+        </div>
+    </router-link>
     </div>
     
 </template>
 <script>
 export default {
     name:'HomeHeader', 
-    props: {
-        city: String
-    }
 }
 </script>
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
+@import '~styles/varibles.styl'
     .header
         display flex
-        line-height .86rem
+        line-height $headerHeight
         background $bgColor
         color #fff
         .header-left
@@ -51,6 +50,7 @@ export default {
             width 1.24rem
             float right 
             text-align center
+            color #ffffff
             .icon-jiantou
                 font-size .24rem
                 margin-left -.04rem
